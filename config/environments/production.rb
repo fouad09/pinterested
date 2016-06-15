@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = {host:'pinterested0909.herokuapp.com'}
   
-  confi.paperclip_default = {
+  config.paperclip_default = {
     :storage => :s3,
     :s3_credentials =>{
     :bucket => ENV['AWS_BUCKET'],
