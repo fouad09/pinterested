@@ -8,7 +8,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.all
+      @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page],:per_page => 3)
   end
 
   # GET /pins/1
@@ -68,5 +68,4 @@ class PinsController < ApplicationController
       @pin = current_user.pins.find_by(id: params[:id])
       redirect_to pins_path, notice:"Not authorized to edit this pin" if @pin.nil?
     end
-    
 end

@@ -2,9 +2,13 @@
 
 $jumbotron-bg: 	#FFF8DC;
 $navbar-default-bg: #d2691e;
-$body-bg: #ffdead;
+$body-bg: #F5FFFA;
 
 @import"bootstrap-sprockets";
 @import"bootstrap";
+
+.center {
+    text-align: center;
+}
 
 
